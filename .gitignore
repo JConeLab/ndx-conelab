@@ -1,7 +1,38 @@
+# ==============================================================================
+# General
+# ==============================================================================
+
+# macOS / Windows specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+
+# Editor / IDE specific files
+.idea/
+.vscode/
+*.swp
+*~
+
+# ==============================================================================
+# Python
+# ==============================================================================
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
 
 # C extensions
 *.so
@@ -33,7 +64,9 @@ MANIFEST
 pip-log.txt
 pip-delete-this-directory.txt
 
-# Unit test / coverage reports
+# ==============================================================================
+# Testing & Coverage
+# ==============================================================================
 htmlcov/
 .tox/
 .nox/
@@ -46,14 +79,9 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
+# ==============================================================================
+# Other Tools
+# ==============================================================================
 
 # Spyder project settings
 .spyderproject
@@ -71,7 +99,4 @@ venv.bak/
 dmypy.json
 
 # Jupyter Notebook
-.ipynb_checkpoints
-
-# VS Code
-.vscode/ 
+.ipynb_checkpoints 
