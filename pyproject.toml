@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ndx-conelab"
-version = "0.1.1"
+version = "0.2.0"
 authors = [
   { name="Jose Paulo / Cone Lab", email="zepaulojr1@gmail.com"},
 ]
@@ -15,13 +15,15 @@ license = "MIT"
 classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
     "Intended Audience :: Science/Research",
     "Topic :: Scientific/Engineering",
 ]
 dependencies = [
     "pynwb>=2.1.0",      # PyNWB is essential
+    "PyYAML>=6.0",       # YAML serialization for generator
+    "filelock>=3.4.0",
 ]
 
 [project.urls]
@@ -33,4 +35,17 @@ where = ["."]  # look for packages in the current directory
 include = ["ndx_conelab*"] # Include the ndx_conelab package
 
 [tool.setuptools.package-data]
-"ndx_conelab.spec" = ["*.yaml"] # Include YAML files in ndx_conelab/spec 
+"ndx_conelab.spec" = ["*.yaml"]
+"ndx_conelab.extensions" = ["*.yaml"]  # Include generated YAML files
+
+[project.scripts]
+"ndx-conelab" = "ndx_conelab.generator:cli"
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0",
+]
+validation = [
+    "jsonschema>=4.0",
+]
+dev = ["pytest>=7.0", "jsonschema>=4.0"] 
