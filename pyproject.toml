@@ -4,16 +4,16 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ndx-conelab"
-version = "0.1.0"
+version = "0.1.1"
 authors = [
   { name="Jose Paulo / Cone Lab", email="zepaulojr1@gmail.com"},
 ]
 description = "NWB extension for custom Task Parameters used in the Cone Lab."
 readme = "README.md"
 requires-python = ">=3.8"
+license = "MIT"
 classifiers = [
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",

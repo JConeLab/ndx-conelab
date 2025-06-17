@@ -100,10 +100,13 @@ class TaskParameters(LabMetaData):
                  iti_jitter_percentage=None, prestimulus_min_ms=None, prestimulus_max_ms=None,
                  solenoid_open_duration_ms=None, solenoid_open_count=None,
                  too_fast_threshold_ms=None, false_alarm_timeout_ms=None,
-                 fail_timeout_ms=None, description="N/A"):
+                 fail_timeout_ms=None, description=None):
 
         super().__init__(name=name)
         self.description = description
+        # KNOWN ISSUE: The 'description' field currently reads back as its default value ('N/A' or None)
+        # when the NWB file is re-opened, despite being set here.
+        # All custom fields work correctly. Deferring full fix for 'description'.
 
         # Set custom fields directly from explicit arguments
         self.reaction_time_window_ms = reaction_time_window_ms

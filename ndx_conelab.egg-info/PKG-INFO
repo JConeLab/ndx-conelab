@@ -1,12 +1,12 @@
 Metadata-Version: 2.4
 Name: ndx-conelab
-Version: 0.1.0
+Version: 0.1.1
 Summary: NWB extension for custom Task Parameters used in the Cone Lab.
 Author-email: Jose Paulo / Cone Lab <zepaulojr1@gmail.com>
+License-Expression: MIT
 Project-URL: Homepage, https://github.com/JConeLab/ndx-conelab
 Project-URL: Bug Tracker, https://github.com/JConeLab/ndx-conelab/issues
 Classifier: Programming Language :: Python :: 3
-Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
 Classifier: Development Status :: 3 - Alpha
 Classifier: Intended Audience :: Developers
